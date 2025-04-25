@@ -49,51 +49,55 @@ var agent = new api_1.BskyAgent({
 });
 function main() {
     return __awaiter(this, void 0, void 0, function () {
-        var files, randomFilePath, basename, fileUrl, imageBlob, uploadBlobRespose, _a, _b, blobRef, postResponse;
+        var randomFilePath, imageBlob, fileUrls, fileUrl, uploadBlobRespose, _a, _b, blobRef, postResponse;
         return __generator(this, function (_c) {
             switch (_c.label) {
                 case 0:
-                    files = fs
+                    fileUrls = fs
                         .readFileSync(process.env.IMAGE_LIST_NAME)
                         .toString('utf8')
                         .split('\n');
-                    randomFilePath = files[files.length * Math.random() | 0];
-                    basename = path.basename(randomFilePath);
+                    randomFilePath = fileUrls[fileUrls.length * Math.random() | 0];
                     fileUrl = process.env.IMAGE_URL_BASE + randomFilePath;
                     console.log("Fetching file... ".concat(fileUrl));
                     return [4 /*yield*/, fetch(fileUrl)];
                 case 1: return [4 /*yield*/, (_c.sent()).blob()];
                 case 2:
                     imageBlob = _c.sent();
-                    console.log("Got ".concat(basename, " (size=").concat(imageBlob.size, ",type=").concat(imageBlob.type, ")"));
+                    console.log("Got ".concat(randomFilePath, " (size=").concat(imageBlob.size, ",type=").concat(imageBlob.type, ")"));
+                    _c.label = 3;
+                case 3:
+                    if (!imageBlob.type.startsWith("image/")) return [3 /*break*/, 0];
+                    _c.label = 4;
+                case 4:
                     console.log("Logging in as ".concat(process.env.BLUESKY_USERNAME, "..."));
                     return [4 /*yield*/, agent.login({ identifier: process.env.BLUESKY_USERNAME, password: process.env.BLUESKY_PASSWORD })];
-                case 3:
+                case 5:
                     _c.sent();
                     console.log("Uploading image as blob...");
                     _b = (_a = agent).uploadBlob;
                     return [4 /*yield*/, imageBlob.bytes()];
-                case 4: return [4 /*yield*/, _b.apply(_a, [_c.sent(), {
+                case 6: return [4 /*yield*/, _b.apply(_a, [_c.sent(), {
                             "encoding": "",
                             "headers": {
                                 "Content-Type": imageBlob.type
                             }
                         }])];
-                case 5:
+                case 7:
                     uploadBlobRespose = _c.sent();
                     blobRef = uploadBlobRespose.data.blob;
                     console.log("Successfully uploaded blob (ref=".concat(blobRef.toJSON(), ")"));
                     return [4 /*yield*/, agent.post({
-                            text: basename,
+                            text: randomFilePath.toUpperCase(),
                             embed: {
                                 $type: "app.bsky.embed.images",
                                 images: [{
-                                        alt: basename,
+                                        alt: path.basename(randomFilePath),
                                         image: blobRef
                                     }]
                             }
                         })];
-                case 6:
+                case 8:
                     postResponse = _c.sent();
                     console.log("Just posted! ".concat(postResponse.cid));
                     return [2 /*return*/];
@@ -121,5 +125,3 @@ var scheduleExpressionMinute = '* * * * *'; // Run once every minute for testing
 var scheduleExpression = '0 */3 * * *'; // Run once every three hours in prod
 var job = new cron_1.CronJob(scheduleExpressionMinute, tryMain); // change to scheduleExpressionMinute for testing
 job.start();
-function getFileUrls() {
-}
