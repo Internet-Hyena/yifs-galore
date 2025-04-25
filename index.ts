@@ -15,16 +15,15 @@ const agent = new BskyAgent({
 
 async function main() {
     // get a random file from the list
-    const files = fs
+    const fileUrls = fs
     .readFileSync(process.env.IMAGE_LIST_NAME!)
         .toString('utf8')
         .split('\n');
-    const randomFilePath = files[files.length * Math.random() | 0];
-    const basename = path.basename(randomFilePath);
-    const fileUrl = process.env.IMAGE_URL_BASE! + randomFilePath;
-    console.log(`Fetching file... ${fileUrl}`);
-    const imageBlob = await (await fetch(fileUrl)).blob();
-    console.log(`Got ${basename} (size=${imageBlob.size},type=${imageBlob.type})`)
+    const randomFileUrl = fileUrls[fileUrls.length * Math.random() | 0];
+    const basename = path.basename(randomFileUrl);
+    console.log(`Fetching file... ${randomFileUrl}`);
+    const imageBlob = await (await fetch(randomFileUrl)).blob();
+    console.log(`Got ${basename} (size=${imageBlob.size},type=${imageBlob.type})`);
     
     console.log(`Logging in as ${process.env.BLUESKY_USERNAME!}...`);
     await agent.login({ identifier: process.env.BLUESKY_USERNAME!, password: process.env.BLUESKY_PASSWORD!})
@@ -70,7 +69,3 @@ const scheduleExpression = '0 */3 * * *'; // Run once every three hours in prod
 const job = new CronJob(scheduleExpressionMinute, tryMain); // change to scheduleExpressionMinute for testing
 
 job.start();
-
-function getFileUrls() {
-
-}
