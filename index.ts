@@ -2,6 +2,8 @@ import { BskyAgent } from '@atproto/api';
 import * as dotenv from 'dotenv';
 import { CronJob } from 'cron';
 import * as process from 'process';
+import * as fs from 'node:fs';
+import * as path from 'node:path';
 
 dotenv.config();
 
@@ -12,20 +14,63 @@ const agent = new BskyAgent({
 
 
 async function main() {
+    // get a random file from the list
+    const files = fs
+    .readFileSync(process.env.IMAGE_LIST_NAME!)
+        .toString('utf8')
+        .split('\n');
+    const randomFilePath = files[files.length * Math.random() | 0];
+    const basename = path.basename(randomFilePath);
+    const fileUrl = process.env.IMAGE_URL_BASE! + randomFilePath;
+    console.log(`Fetching file... ${fileUrl}`);
+    const imageBlob = await (await fetch(fileUrl)).blob();
+    console.log(`Got ${basename} (size=${imageBlob.size},type=${imageBlob.type})`)
+    
+    console.log(`Logging in as ${process.env.BLUESKY_USERNAME!}...`);
     await agent.login({ identifier: process.env.BLUESKY_USERNAME!, password: process.env.BLUESKY_PASSWORD!})
-    await agent.post({
-        text: "🙂"
+    
+    console.log(`Uploading image as blob...`);
+    const uploadBlobRespose = await agent.uploadBlob(await imageBlob.bytes(), {
+        "encoding": "",
+        "headers": {
+            "Content-Type": imageBlob.type
+        }
     });
-    console.log("Just posted!")
+    const blobRef = uploadBlobRespose.data.blob;
+    console.log(`Successfully uploaded blob (ref=${blobRef.toJSON()})`);
+    
+    const postResponse = await agent.post({
+        text: basename,
+        embed: {
+            $type: "app.bsky.embed.images",
+            images: [{
+                alt: basename,
+                image: blobRef
+            }]
+        }
+    });
+    
+    console.log(`Just posted! ${postResponse.cid}`);
 }
 
-main();
+async function tryMain() {
+    try {
+        main() 
+    } catch (e) {
+        console.error(e);
+    };
+}
 
+tryMain();
 
 // Run this on a cron job
 const scheduleExpressionMinute = '* * * * *'; // Run once every minute for testing
 const scheduleExpression = '0 */3 * * *'; // Run once every three hours in prod
 
-const job = new CronJob(scheduleExpression, main); // change to scheduleExpressionMinute for testing
+const job = new CronJob(scheduleExpressionMinute, tryMain); // change to scheduleExpressionMinute for testing
 
 job.start();
+
+function getFileUrls() {
+
+}
