@@ -20,5 +20,5 @@ jobs:
         env:
           BLUESKY_USERNAME: ${{ secrets.BLUESKY_USERNAME }}
           BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
-          IMAGE_URL_BASE: ${{ env.IMAGE_URL_BASE }}
-          IMAGE_LIST_NAME: ${{ env.IMAGE_LIST_NAME }}
+          IMAGE_URL_BASE: ${{ vars.IMAGE_URL_BASE }}
+          IMAGE_LIST_NAME: ${{ vars.IMAGE_LIST_NAME }}
