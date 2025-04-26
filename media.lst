@@ -39,7 +39,6 @@ art/grim/adult/1999/Gri-Kibc.jpg
 art/grim/adult/1999/Gri-snakewuf2c.jpg
 art/grim/adult/1999/Gri-DobieDinoc.jpg
 art/grim/adult/1999/Gri-Cuffedc.jpg
-art/soul/web-presplash.png
 art/grim/adult/2002/Gri-ChipSk1.jpg
 art/grim/adult/2002/Gri-PorchWolf.jpg
 art/grim/adult/2002/Gri-RopeBunny.jpg
@@ -224,39 +223,6 @@ art/grim/adult/2000/Gri-Arakaraath.jpg
 art/grim/adult/2000/Gri-Skritchies.jpg
 art/grim/adult/2000/Gri-SnarlDisp.jpg
 art/grim/adult/2000/Gri-cougarrear.jpg
-art/fap1/content/img/prev.png
-art/fap1/content/img/wookiee.gif
-art/fap1/content/img/full.png
-art/fap1/content/img/m-nanimoose.gif
-art/fap1/content/img/m-equis.gif
-art/fap1/content/img/grrrwolf.gif
-art/fap1/content/img/prevoff.png
-art/fap1/content/img/m-grrrwolf.gif
-art/fap1/content/img/next.png
-art/fap1/content/img/exit.png
-art/fap1/content/img/m-soulfox.gif
-art/fap1/content/img/title.gif
-art/fap1/content/img/GrrrPortrait04.jpg
-art/fap1/content/img/equis.gif
-art/fap1/content/img/m-greenmonkey.gif
-art/fap1/content/img/nani2.gif
-art/fap1/content/img/m-fel.gif
-art/fap1/content/img/fennec.gif
-art/fap1/content/img/daisy.gif
-art/fap1/content/img/Wookiee.jpg
-art/fap1/content/img/fit.png
-art/fap1/content/img/nanimoose.gif
-art/fap1/content/img/nextoff.png
-art/fap1/content/img/m-wookiee.gif
-art/fap1/content/img/m-guppy.gif
-art/fap1/content/img/m-fennec.gif
-art/fap1/content/img/guppy.gif
-art/fap1/content/img/trans.gif
-art/fap1/content/img/greenmonkey.gif
-art/fap1/content/img/foxx.gif
-art/fap1/content/img/m-foxx.gif
-art/fap1/content/img/soulfox.gif
-art/fap1/content/img/fel.gif
 art/grim/general/2002/Gri-PPMP2.jpg
 art/grim/general/2002/Gri-tiger+rat.jpg
 art/grim/general/2002/Gri-Lutra.jpg
@@ -1249,15 +1215,6 @@ art/fap1/art/Ian R. Soulfox/Still/SFX-Lion_Balloon.jpg
 art/fap1/art/Ian R. Soulfox/Still/SFX-for-guppy2.jpg
 art/fap1/art/Ian R. Soulfox/Still/SFX-Bik_Lunar_Yiffy_Final.jpg
 art/fap1/art/Ian R. Soulfox/Still/SFX-Trejaan.jpg
-art/grim/res/up.gif
-art/grim/res/movie.gif
-art/grim/res/previous_disabled.gif
-art/grim/res/index.gif
-art/grim/res/previous.gif
-art/grim/res/camera.gif
-art/grim/res/next.gif
-art/grim/res/next_disabled.gif
-art/grim/res/folder.gif
 art/fap1/art/Fel/favorite/soulfox_gift.jpg
 art/fap1/art/Fel/favorite/foxiehound.jpg
 art/fap1/art/Fel/favorite/eclipse.jpg
@@ -1626,7 +1583,6 @@ art/ksma/Rampage/images/BBunboy_3.jpg
 art/ksma/Rampage/images/Tyrnn.jpg
 art/ksma/Rampage/images/Takenshi-Delay.jpg
 art/ksma/Rampage/images/Chelisse-play1.jpg
-art/ksma/Rampage/images/previous.gif
 art/ksma/Rampage/images/Knght2.jpg
 art/ksma/Rampage/images/Analontra-dance.jpg
 art/ksma/Rampage/images/BBunboy_1.jpg
@@ -1635,7 +1591,6 @@ art/ksma/Rampage/images/Can-can-crush.jpg
 art/ksma/Rampage/images/Bennie-Big.jpg
 art/ksma/Rampage/images/BBunboy_4.jpg
 art/ksma/Rampage/images/Kit_Stroll.jpg
-art/ksma/Rampage/images/next.gif
 art/ksma/Rampage/images/Foxtaur-trample.jpg
 art/ksma/Rampage/images/Mace-crush.jpg
 art/ksma/Rampage/images/Anji-Stroll-C.jpg
@@ -1775,9 +1730,7 @@ art/ksma/Stomp/images/Stupid-bug.jpg
 art/ksma/Stomp/images/Pathia_Beach.jpg
 art/ksma/Stomp/images/Uaxac-Step.jpg
 art/ksma/Stomp/images/Aloha2.jpg
-art/ksma/Stomp/images/previous.gif
 art/ksma/Stomp/images/Arilin-01.jpg
-art/ksma/Stomp/images/next.gif
 art/ksma/Stomp/images/Heayt-smash.jpg
 art/ksma/Stomp/images/Stamping-Terror.jpg
 art/ksma/Stomp/images/StompContest.jpg
@@ -1866,7 +1819,6 @@ art/ksma/Naughty/images/KS-yiff01.jpg
 art/ksma/Naughty/images/Nikleen-04.jpg
 art/ksma/Naughty/images/Aloha.jpg
 art/ksma/Naughty/images/Dre-sextoy.jpg
-art/ksma/Naughty/images/previous.gif
 art/ksma/Naughty/images/Big_Job.jpg
 art/ksma/Naughty/images/Uaxac-Stroke.jpg
 art/ksma/Naughty/images/Robin04a.jpg
@@ -1876,7 +1828,6 @@ art/ksma/Naughty/images/Nikleen-03.jpg
 art/ksma/Naughty/images/Helping-Hand.jpg
 art/ksma/Naughty/images/Algebar-fun.jpg
 art/ksma/Naughty/images/Arilin-03.jpg
-art/ksma/Naughty/images/next.gif
 art/ksma/Naughty/images/BBunboy_7.jpg
 art/ksma/Naughty/images/Smish.jpg
 art/ksma/Naughty/images/Foxtaur-toy-boyfriend.jpg
@@ -1930,10 +1881,8 @@ art/ksma/Chomp/images/Feeding-the-Kittydemon.jpg
 art/ksma/Chomp/images/Ni-Snax-bw.jpg
 art/ksma/Chomp/images/Mace-snax.jpg
 art/ksma/Chomp/images/Deep_Throat.jpg
-art/ksma/Chomp/images/previous.gif
 art/ksma/Chomp/images/MegaMicole-tastes.jpg
 art/ksma/Chomp/images/Pathia_Head5.jpg
-art/ksma/Chomp/images/next.gif
 art/ksma/Chomp/images/Taste_Test.jpg
 art/ksma/Chomp/images/BBunboy_6.jpg
 art/ksma/Chomp/images/RaleighPop.jpg
@@ -2256,7 +2205,6 @@ art/ksma/All/images/Deep_Throat.jpg
 art/ksma/All/images/Aloha1.jpg
 art/ksma/All/images/Dre-sextoy.jpg
 art/ksma/All/images/Chelisse-play1.jpg
-art/ksma/All/images/previous.gif
 art/ksma/All/images/Knght2.jpg
 art/ksma/All/images/Heayt-01.jpg
 art/ksma/All/images/Analontra-dance.jpg
@@ -2287,7 +2235,6 @@ art/ksma/All/images/Kit_Stroll.jpg
 art/ksma/All/images/Arilin-01.jpg
 art/ksma/All/images/Arilin-03.jpg
 art/ksma/All/images/Foreplay1.jpg
-art/ksma/All/images/next.gif
 art/ksma/All/images/Deidre-sit1b.jpg
 art/ksma/All/images/Foxtaur-trample.jpg
 art/ksma/All/images/Taste_Test.jpg
@@ -2610,10 +2557,8 @@ art/ksma/Portrait/images/Kaylin_R-4.jpg
 art/ksma/Portrait/images/Everest-lounge.jpg
 art/ksma/Portrait/images/Kitana-n-Mace.jpg
 art/ksma/Portrait/images/Kitana.jpg
-art/ksma/Portrait/images/previous.gif
 art/ksma/Portrait/images/MegaHaley-Dance.jpg
 art/ksma/Portrait/images/Nikleen-02.jpg
-art/ksma/Portrait/images/next.gif
 art/ksma/Portrait/images/Deidre-sit1b.jpg
 art/ksma/Portrait/images/Mace-vs-Shere-01.jpg
 art/ksma/Portrait/images/Fifty-foot-Fisher.jpg
@@ -3056,7 +3001,6 @@ art/ksma/Other/images/Easter-Ranalir.jpg
 art/ksma/Other/images/Algebar_1a.jpg
 art/ksma/Other/images/Macro_OSHA.jpg
 art/ksma/Other/images/Aloha1.jpg
-art/ksma/Other/images/previous.gif
 art/ksma/Other/images/Heayt-01.jpg
 art/ksma/Other/images/Necklass.jpg
 art/ksma/Other/images/Monique-looms.jpg
@@ -3065,7 +3009,6 @@ art/ksma/Other/images/Wolf-Bunny-rgb1a.jpg
 art/ksma/Other/images/Monique-holds.jpg
 art/ksma/Other/images/Big-Tourists.jpg
 art/ksma/Other/images/Foreplay1.jpg
-art/ksma/Other/images/next.gif
 art/ksma/Other/images/Lighthouse.jpg
 art/ksma/Other/images/KSaa-greets.jpg
 art/ksma/Other/images/MacroFurry-Symbol.jpg
@@ -4268,7 +4211,6 @@ art/bbs/NEW/CHIARO~2.GIF
 art/bbs/NEW/CHEESK~1.GIF
 art/bbs/NEW/CHIARO~3.GIF
 art/bbs/NEW/BOGHAZ~1.GIF
-art/two/web-presplash.png
 art/bbs/F/FRNKZK2.GIF
 art/bbs/F/FOX5.GIF
 art/bbs/F/FLINT1.GIF
