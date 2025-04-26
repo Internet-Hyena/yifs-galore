@@ -18,5 +18,7 @@ jobs:
       - name: Send post
         run: npm start
         env:
-          BSKY_HANDLE: ${{ secrets.BLUESKY_USERNAME }}
-          BSKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
+          BLUESKY_USERNAME: ${{ secrets.BLUESKY_USERNAME }}
+          BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
+          IMAGE_URL_BASE: ${{ env.IMAGE_URL_BASE }}
+          IMAGE_LIST_NAME: ${{ env.IMAGE_LIST_NAME }}
