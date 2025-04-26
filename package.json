@@ -7,5 +7,10 @@
   },
   "devDependencies": {
     "@types/node": "^22.15.2"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "start": "node ."
   }
 }

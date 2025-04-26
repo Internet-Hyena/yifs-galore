@@ -56,20 +56,4 @@ async function main() {
     console.log(`Just posted! ${postResponse.cid}`);
 }
 
-async function tryMain() {
-    try {
-        main() 
-    } catch (e) {
-        console.error(e);
-    };
-}
-
-tryMain();
-
-// Run this on a cron job
-const scheduleExpressionMinute = '* * * * *'; // Run once every minute for testing
-const scheduleExpression = '0 */1 * * *'; // Run once every hour in prod
-
-const job = new CronJob(scheduleExpression, tryMain); // change to scheduleExpressionMinute for testing
-
-job.start();
+main();
