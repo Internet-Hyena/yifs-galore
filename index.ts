@@ -27,7 +27,7 @@ async function main() {
         console.log(`Fetching file... ${fileUrl}`);
         imageBlob = await (await fetch(fileUrl)).blob();
         console.log(`Got ${randomFilePath} (size=${imageBlob.size},type=${imageBlob.type})`);
-    } while (!imageBlob.type.startsWith("image/"))
+    } while (!imageBlob.type.startsWith("image/") && imageBlob.size < 976000)
     
     console.log(`Logging in as ${process.env.BLUESKY_USERNAME!}...`);
     await agent.login({ identifier: process.env.BLUESKY_USERNAME!, password: process.env.BLUESKY_PASSWORD!})
