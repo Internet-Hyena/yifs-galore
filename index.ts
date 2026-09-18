@@ -18,6 +18,8 @@ async function main() {
     let randomFilePath: string;
     let imageBlob: Blob;
     let name;
+    let tries = 0;
+    let maxTries = 10;
     do {
         const fileUrls = fs
             .readFileSync(process.env.IMAGE_LIST_NAME!)
@@ -33,7 +35,8 @@ async function main() {
         name = `${path.basename(randomFilePath, path.extname(randomFilePath)).toUpperCase()}.GIF`;
 
         console.log(name);
-    } while (!imageBlob.type.startsWith("image/") || imageBlob.size > 976000)
+        tries += 1;
+    } while (tries < 10 && (!imageBlob.type.startsWith("image/") || imageBlob.size > 976000))
 
     console.log(`Logging in as ${process.env.BLUESKY_USERNAME!}...`);
     await agent.login({ identifier: process.env.BLUESKY_USERNAME!, password: process.env.BLUESKY_PASSWORD! })
