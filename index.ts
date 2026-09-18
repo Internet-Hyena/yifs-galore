@@ -52,7 +52,7 @@ async function main() {
     console.log(`Successfully uploaded blob (ref=${blobRef.toJSON()})`);
 
     const postResponse = await agent.post({
-        text: randomFilePath.toUpperCase(),
+        text: name,
         embed: {
             $type: "app.bsky.embed.images",
             images: [{
