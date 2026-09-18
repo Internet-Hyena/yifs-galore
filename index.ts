@@ -26,7 +26,7 @@ async function main() {
             .toString('utf8')
             .split('\n');
         randomFilePath = fileUrls[fileUrls.length * Math.random() | 0];
-        const fileUrl = encodeURI(process.env.IMAGE_URL_BASE! + randomFilePath);
+        const fileUrl = process.env.IMAGE_URL_BASE! + encodeURIComponent(randomFilePath).replace("#", "%23");
         console.log(`Fetching file... ${fileUrl}`);
         imageBlob = await (await fetch(fileUrl)).blob();
         console.log(`Got ${randomFilePath} (size=${imageBlob.size},type=${imageBlob.type})`);
