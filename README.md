@@ -1,18 +1,11 @@
-# Bluesky Bot Tutorial
+# yifs-galore
 
-This folder contains a starter template for creating a bot on Bluesky. In this example, the bot posts a smiley emoji on an automated schedule once every three hours.
+A Bluesky "hourly image" bot which posts old-school furry art. <https://bsky.app/profile/yifs-bot.bsky.social>
 
-## Set Up
+Sources (potentially NSFW):
+* [Vila's Furry Archive | Neocities](https://vilaa.neocities.org/)
+* [Furry History Collection | Internet Archive]([https://vilaa.neocities.org/)](https://archive.org/details/furry-history?tab=collection&page=2)
 
-1. Install Typescript: `npm i -g typescript`
-2. Install Node.js: `npm i -g ts-node`
-3. Make a copy of the example `.env` file by running: `cp example.env .env`. Set your username and password in `.env`. Use an App Password.
-4. Compile your project by running: `npx tsc` or activate watch mode to have your code automatically compile: `npx tsc -w`
+# LICENSE
 
-## Running the script 
-1. You can run the script locally: `node index.js`. You should see a smiley emoji posted to your Bluesky account. 
-2. Modify the script however you like to make this bot your own! 
-
-## Deploying your bot
-1. You can deploy a simple bot for free or low cost on a variety of platforms. For example, check out [Heroku](https://devcenter.heroku.com/articles/github-integration) or [Fly.io](https://fly.io/docs/reference/fly-launch/).
-
+This code is provided under a dual-license WTFPL / MIT-0. The art assets themselves are copyrighted to their original owner; their use here is for non-commercial purposes only.
