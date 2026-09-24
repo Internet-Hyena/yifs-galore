@@ -4,7 +4,7 @@ A Bluesky "hourly image" bot which posts old-school furry art. <https://bsky.app
 
 Sources (potentially NSFW):
 * [Vila's Furry Archive | Neocities](https://vilaa.neocities.org/)
-* [Furry History Collection | Internet Archive]([https://vilaa.neocities.org/)](https://archive.org/details/furry-history?tab=collection&page=2)
+* [Furry History Collection | Internet Archive](https://archive.org/details/furry-history?tab=collection&page=2)
 
 # LICENSE
 
